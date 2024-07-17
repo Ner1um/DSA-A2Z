@@ -3,21 +3,27 @@ using namespace std;
 
 void nForest(int n)
 {
-    int temp = 1;
-    int mid = n-1;
-    for (int i = 0; i < n; i++)
+    int col = 2 * n - 1;
+    for (int i=0; i<n; i++)
     {
-        for (int j = mid; j > 0; j--)
+        if(i > 0)
         {
-            cout << " ";
+            for (int j=0; j<i; j++)
+            {
+                cout << " ";
+            }
         }
-        mid--;
-        
-        for (int m = 0; m < temp; m++)
+
+        for (int k=col; k > 0; k--)
         {
             cout << "*";
         }
-        temp = temp + 2;
+        col = col - 2;
+
+        for (int j=0; j<i; j++)
+        {
+            cout << " ";
+        }
         cout << endl;
     }
 };
