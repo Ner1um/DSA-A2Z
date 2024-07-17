@@ -1,4 +1,6 @@
-Enter the size of the array: 
-Enter the values: 
-Sorted array: 
-5 6 11 12 13 
+Enter the N-Dimension: 
+    *
+   ***
+  *****
+ *******
+*********

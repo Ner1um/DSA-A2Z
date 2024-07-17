@@ -3,21 +3,14 @@ using namespace std;
 
 void nForest(int n)
 {
-    int temp = 1;
-    int mid = n-1;
-    for (int i = 0; i < n; i++)
+    for (int i=1; i<=n; i++)
     {
-        for (int j = mid; j > 0; j--)
-        {
-            cout << " ";
-        }
-        mid--;
-        
-        for (int m = 0; m < temp; m++)
+        int j = 0;
+        while (j < i)
         {
             cout << "*";
+            j++;
         }
-        temp = temp + 2;
         cout << endl;
     }
 };
@@ -31,7 +24,7 @@ int main()
         cout << "Enter the N-Dimension: " << endl;
         
         cin >> n;
-        if (1 <= n && n <= 20)
+        if (1 <= n && n <= 25)
         {
             flag = 0;
             nForest(n);
